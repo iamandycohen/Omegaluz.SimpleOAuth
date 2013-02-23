@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omegaluz.SimpleOAuth", "SimpleOAuth\Omegaluz.SimpleOAuth.csproj", "{CF589BE6-7D5F-4E30-A978-8DA99FD7E4E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omegaluz.SimpleOAuth", "Omegaluz.SimpleOAuth\Omegaluz.SimpleOAuth.csproj", "{CF589BE6-7D5F-4E30-A978-8DA99FD7E4E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "SimpleOAuthMvcTest\Example.csproj", "{F1C14ED9-A545-4DC9-A794-E81CF7CE1240}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{F1C14ED9-A545-4DC9-A794-E81CF7CE1240}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7446CFE4-164C-49B6-897F-0CBC011E3698}"
 	ProjectSection(SolutionItems) = preProject

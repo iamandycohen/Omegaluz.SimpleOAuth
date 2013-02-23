@@ -7,7 +7,6 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("Omegaluz.SimpleOAuth")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Omegaluz.SimpleOAuth")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]

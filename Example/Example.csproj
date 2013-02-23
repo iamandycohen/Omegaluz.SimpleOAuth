@@ -322,7 +322,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleOAuth\Omegaluz.SimpleOAuth.csproj">
+    <ProjectReference Include="..\Omegaluz.SimpleOAuth\Omegaluz.SimpleOAuth.csproj">
       <Project>{cf589be6-7d5f-4e30-a978-8da99fd7e4e0}</Project>
       <Name>Omegaluz.SimpleOAuth</Name>
     </ProjectReference>
