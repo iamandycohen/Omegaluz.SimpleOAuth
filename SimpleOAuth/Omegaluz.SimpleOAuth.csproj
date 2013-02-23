@@ -74,6 +74,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Omegaluz.SimpleOAuth.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

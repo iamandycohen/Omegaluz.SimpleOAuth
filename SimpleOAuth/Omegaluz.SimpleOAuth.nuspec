@@ -9,8 +9,8 @@
     <projectUrl>https://github.com/omegaluz/SimpleOAuth</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2013</copyright>
-    <tags>OAuth ASP.Net WebPages</tags>
+    <tags>OAuth OAuth2 WebPages</tags>
   </metadata>
 </package>
