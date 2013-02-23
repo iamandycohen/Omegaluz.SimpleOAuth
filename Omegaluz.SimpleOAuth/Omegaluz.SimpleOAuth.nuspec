@@ -4,12 +4,12 @@
     <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <projectUrl>https://github.com/omegaluz/SimpleOAuth</projectUrl>
+    <authors>Andy Cohen</authors>
+    <owners>Andy Cohen</owners>
+    <projectUrl>https://github.com/omegaluz/Omegaluz.SimpleOAuth</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <releaseNotes>This version has no release notes.</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>OAuth OAuth2 WebPages</tags>
   </metadata>
