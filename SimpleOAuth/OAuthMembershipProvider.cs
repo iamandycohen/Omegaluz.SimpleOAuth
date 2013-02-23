@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleOAuth
+namespace Omegaluz.SimpleOAuth
 {
     public abstract class OAuthMembershipProvider : IOpenAuthDataProvider
     {

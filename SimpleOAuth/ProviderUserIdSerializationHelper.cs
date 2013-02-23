@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Security;
 
-namespace SimpleOAuth
+namespace Omegaluz.SimpleOAuth
 {
     internal static class ProviderUserIdSerializationHelper
     {

@@ -1,8 +1,8 @@
-﻿using SimpleOAuth;
-using SimpleOAuthMvcTest.Properties;
-using SimpleOAuthMvcTest.Providers;
+﻿using Omegaluz.SimpleOAuth;
+using Example.Properties;
+using Example.Providers;
 
-namespace SimpleOAuthMvcTest
+namespace Example
 {
     public static class AuthConfig
     {

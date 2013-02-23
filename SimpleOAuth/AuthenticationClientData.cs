@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleOAuth
+namespace Omegaluz.SimpleOAuth
 {
     /// <summary>
     /// Store display name and extra data of an IAuthenticationClient instance.

@@ -7,8 +7,8 @@
     <ProjectGuid>{CF589BE6-7D5F-4E30-A978-8DA99FD7E4E0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SimpleOAuth</RootNamespace>
-    <AssemblyName>SimpleOAuth</AssemblyName>
+    <RootNamespace>Omegaluz.SimpleOAuth</RootNamespace>
+    <AssemblyName>Omegaluz.SimpleOAuth</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

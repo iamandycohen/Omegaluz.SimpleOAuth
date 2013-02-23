@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace SimpleOAuth
+namespace Omegaluz.SimpleOAuth
 {
     /// <summary>
     /// Contains APIs to manage authentication against OAuth &amp; OpenID service providers

@@ -1,12 +1,12 @@
-﻿using SimpleOAuth;
-using SimpleOAuthMvcTest.Models;
+﻿using Omegaluz.SimpleOAuth;
+using Example.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Security;
 using System.Web.WebPages;
 
-namespace SimpleOAuthMvcTest.Providers
+namespace Example.Providers
 {
 
     public class OAuthMembershipProxyProvider : OAuthMembershipProvider

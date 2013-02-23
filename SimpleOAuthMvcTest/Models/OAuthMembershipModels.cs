@@ -6,7 +6,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace SimpleOAuthMvcTest.Models
+namespace Example.Models
 {
 
     public class MembershipContext : DbContext

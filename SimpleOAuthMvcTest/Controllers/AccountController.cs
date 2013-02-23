@@ -7,11 +7,11 @@ using System.Web.Mvc;
 using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using WebMatrix.WebData;
-using SimpleOAuthMvcTest.Filters;
-using SimpleOAuthMvcTest.Models;
-using SimpleOAuth;
+using Example.Filters;
+using Example.Models;
+using Omegaluz.SimpleOAuth;
 
-namespace SimpleOAuthMvcTest.Controllers
+namespace Example.Controllers
 {
     [Authorize]
     [InitializeSimpleMembership]
