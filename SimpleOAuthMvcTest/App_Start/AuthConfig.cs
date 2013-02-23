@@ -1,4 +1,5 @@
 ﻿using SimpleOAuth;
+using SimpleOAuthMvcTest.Properties;
 using SimpleOAuthMvcTest.Providers;
 
 namespace SimpleOAuthMvcTest
@@ -26,9 +27,9 @@ namespace SimpleOAuthMvcTest
 
             SimpleOAuthSecurity.SetProvider(new OAuthMembershipProxyProvider());
 
-            SimpleOAuthSecurity.RegisterFacebookClient("558539204169705", "8178ad9b4e352f5a8c4349ec08136fd7");
-            SimpleOAuthSecurity.RegisterTwitterClient("W6gy7E7YSg9dDAvhzGIl1A", "y7tFMtEAxQpjPbNTawoUaRxPFR1JkmU8LWqTMs");
-            SimpleOAuthSecurity.RegisterLinkedInClient("v2ae4pcdrxu9", "30BQz5D1pPQBDwDw");
+            SimpleOAuthSecurity.RegisterFacebookClient(Settings.Default.FacebookAppId, Settings.Default.FacebookAppSecret);
+            SimpleOAuthSecurity.RegisterTwitterClient(Settings.Default.TwitterConsumerKey, Settings.Default.TwitterConsumerSecret);
+            SimpleOAuthSecurity.RegisterLinkedInClient(Settings.Default.LinkedInConsumerKey, Settings.Default.LinkedInConsumerSecret);
             SimpleOAuthSecurity.RegisterGoogleClient();
         }
     }
