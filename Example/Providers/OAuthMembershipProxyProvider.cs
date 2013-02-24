@@ -18,7 +18,9 @@ namespace Example.Providers
         {
             using (var users = new UsersContext())
             {
-                var user = users.UserProfiles.FirstOrDefault(e => (object)e.UserId == userId);
+                var user = users.UserProfiles
+                    .FirstOrDefault(e => (object)e.UserId == userId);
+
                 return user != null ? user.UserName : null;
             }
         }
@@ -26,20 +28,23 @@ namespace Example.Providers
         public override object GetUserIdFromOAuth(string provider, string providerUserId)
         {
             object userID = null;
+
             using (var membership = new MembershipContext())
             {
-                var oauthuser = membership.OAuthMembership.FirstOrDefault(e => e.Provider == provider && e.ProviderUserId == providerUserId);
+                var oauthuser = membership.OAuthMembership
+                    .FirstOrDefault(e => e.Provider == provider && e.ProviderUserId == providerUserId);
+
                 if (oauthuser != null)
                 {
                     userID = oauthuser.UserId;
                 }
             }
+
             return userID;
         }
 
         public override void CreateOrUpdateOAuthAccount(string provider, string providerUserId, string userName)
         {
-
             if (userName.IsEmpty())
             {
                 throw new MembershipCreateUserException(MembershipCreateStatus.ProviderError);
@@ -53,6 +58,7 @@ namespace Example.Providers
             }
 
             var oldUserId = GetUserIdFromOAuth(provider, providerUserId);
+
             using (var db = new MembershipContext())
             {
                 if (oldUserId == null || (oldUserId != null && (int)oldUserId == -1))
@@ -80,7 +86,9 @@ namespace Example.Providers
                     // account already exists. update it
                     try
                     {
-                        var membership = db.OAuthMembership.First(e => e.Provider.ToUpper() == provider.ToUpper() && e.ProviderUserId.ToUpper() == providerUserId.ToUpper());
+                        var membership = db.OAuthMembership
+                            .First(e => e.Provider.ToUpper() == provider.ToUpper() && e.ProviderUserId.ToUpper() == providerUserId.ToUpper());
+
                         membership.UserId = userId;
                         db.SaveChanges();
                     }
@@ -88,7 +96,6 @@ namespace Example.Providers
                     {
                         throw new MembershipCreateUserException(MembershipCreateStatus.ProviderError);
                     }
-
                 }
             }
         }
@@ -106,7 +113,6 @@ namespace Example.Providers
 
         public override void DeleteOAuthAccount(string provider, string providerUserId)
         {
-
             using (var db = new MembershipContext())
             {
                 // delete account
@@ -122,18 +128,17 @@ namespace Example.Providers
                 {
                     throw new MembershipCreateUserException(MembershipCreateStatus.ProviderError);
                 }
-
             }
         }
 
         public override ICollection<OAuthAccount> GetAccountsForUser(string userName)
         {
             int userId = (int)GetUserId(userName);
+
             if (userId != -1)
             {
                 using (var db = new MembershipContext())
                 {
-
                     var oauthMemberships = db.OAuthMembership
                         .Where(e => e.UserId == userId);
 
@@ -153,15 +158,17 @@ namespace Example.Providers
         {
             using (var db = new UsersContext())
             {
-                var result = db.UserProfiles.FirstOrDefault(e => e.UserName.ToUpper() == userName.ToUpper());
+                var result = db.UserProfiles
+                    .FirstOrDefault(e => e.UserName.ToUpper() == userName.ToUpper());
+
                 if (result != null)
                 {
                     return result.UserId;
                 }
+
                 return -1;
             }
         }
-
 
     }
 }

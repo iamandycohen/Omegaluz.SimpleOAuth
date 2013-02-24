@@ -575,7 +575,7 @@ namespace Omegaluz.SimpleOAuth
         /// <returns>
         ///   <c>true</c> if there is a local account with the specified user id]; otherwise, <c>false</c>.
         /// </returns>
-        public static bool HasLocalAccount(int userId)
+        public static bool HasLocalAccount(object userId)
         {
             return OAuthDataProvider.HasLocalAccount(userId);
         }
