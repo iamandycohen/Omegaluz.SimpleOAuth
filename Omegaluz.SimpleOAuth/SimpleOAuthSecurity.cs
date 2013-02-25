@@ -539,6 +539,11 @@ namespace Omegaluz.SimpleOAuth
 
         #region "OAuthMembershipProvider"
 
+        public static string CreateAccount(string userName, string password, bool requireConfirmationToken = false)
+        {
+            return OAuthDataProvider.CreateAccount(userName, password, requireConfirmationToken);
+        }
+
         /// <summary>
         /// Creates or update the account with the specified provider, provider user id and associate it with the specified user name.
         /// </summary>
