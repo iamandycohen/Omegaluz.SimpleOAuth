@@ -271,9 +271,7 @@ namespace Example.Controllers
                     if (user == null)
                     {
                         // Insert name into the profile table
-                        db.UserProfiles.Add(new UserProfile { UserName = model.UserName });
-                        db.SaveChanges();
-
+                        SimpleOAuthSecurity.CreateUserRow(model.UserName);
                         SimpleOAuthSecurity.CreateOrUpdateAccount(provider, providerUserId, model.UserName);
                         SimpleOAuthSecurity.Login(provider, providerUserId, createPersistentCookie: false);
                         

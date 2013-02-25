@@ -555,6 +555,11 @@ namespace Omegaluz.SimpleOAuth
             OAuthDataProvider.CreateOrUpdateOAuthAccount(providerName, providerUserId, userName);
         }
 
+        public static void CreateUserRow(string userName)
+        {
+            OAuthDataProvider.CreateUserRow(userName);
+        }
+
 
         /// <summary>
         /// Gets all OAuth &amp; OpenID accounts which are associted with the specified user name.

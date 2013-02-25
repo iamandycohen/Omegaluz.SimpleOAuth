@@ -158,6 +158,36 @@ namespace Example.Providers
             return WebSecurity.CreateAccount(userName, password, requireConfirmationToken);
         }
 
+        public override void CreateUserRow(string userName)
+        {
+
+            try
+            {
+
+                using (var db = new UsersContext())
+                {
+                    // check to see that there is no existing user
+                    var user = db.UserProfiles
+                        .FirstOrDefault(e => e.UserName.ToUpper() == userName.ToUpper());
+
+                    if (user != null)
+                    {
+                        throw new MembershipCreateUserException(MembershipCreateStatus.DuplicateUserName);
+                    }
+
+                    db.UserProfiles.Add(new UserProfile { UserName = userName });
+                    db.SaveChanges();
+                }
+
+            }
+            catch (Exception)
+            {
+                throw new MembershipCreateUserException(MembershipCreateStatus.ProviderError);
+            }
+
+        }
+
+
         #endregion
 
         public object GetUserId(string userName)

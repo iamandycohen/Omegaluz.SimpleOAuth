@@ -135,5 +135,14 @@ namespace Omegaluz.SimpleOAuth
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Creates the user row without creating the membership row
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="values"></param>
+        public virtual void CreateUserRow(string userName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
