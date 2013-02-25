@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Security;
 using System.Web.WebPages;
+using WebMatrix.WebData;
 
 namespace Example.Providers
 {
@@ -150,6 +151,11 @@ namespace Example.Providers
             }
 
             return new OAuthAccount[0];
+        }
+
+        public override string CreateAccount(string userName, string password, bool requireConfirmationToken = false)
+        {
+            return WebSecurity.CreateAccount(userName, password, requireConfirmationToken);
         }
 
         #endregion

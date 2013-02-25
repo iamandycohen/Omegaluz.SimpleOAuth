@@ -123,5 +123,17 @@ namespace Omegaluz.SimpleOAuth
         /// <returns></returns>
         public abstract ICollection<OAuthAccount> GetAccountsForUser(string userName);
 
+        /// <summary>
+        /// Create the Account - DOES NOT CREATE THE USER.  This method assumes that the user alread exists
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <param name="requireConfirmationToken"></param>
+        /// <returns></returns>
+        public virtual string CreateAccount(string userName, string password, bool requireConfirmationToken = false)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
